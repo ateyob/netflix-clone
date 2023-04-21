@@ -34,10 +34,10 @@ const InfoModal: React.FC<InfoModalProps> = ({visible, onClose}) => {
     }
 
     return (
-        <div className=' z-50 transition duration-300 bg-black bg-opacity-80 flex justify-center items-center overflow-x-hidden overflow-y-auto fixed inset-0'>
+        <div className=' px-2 z-50 transition duration-300 bg-black bg-opacity-80 flex justify-center items-center overflow-x-hidden overflow-y-auto fixed inset-0'>
             <div className=' relative w-auto mx-auto max-w-3xl rounded-md overflow-hidden'>
                 <div className={`${isVisible ? 'scale-100' : 'scale-0'} transform duration-300 relative flex-auto bg-zinc-900 drop-shadow-md `}>
-                    <div className=' relative h-96'>
+                    <div className=' relative h-64 md:h-96'>
                         <video 
                             className=' w-full brightness-[60%] object-cover h-full'
                         poster={data?.thumbnailUrl} src={data?.videoUrl} autoPlay muted loop></video>
@@ -60,20 +60,20 @@ const InfoModal: React.FC<InfoModalProps> = ({visible, onClose}) => {
                         </div>
                     </div>
 
-                    <div className=' px-12 py-8'>
+                    <div className=' px-4 md:px-12 py-6 md:py-8'>
                         <p className=' text-green-400 font-semibold text-lg'>
                           New  
                         </p>
 
-                        <p className='text-white text-lg'>
+                        <p className='text-white text-sm py-1 md:text-lg'>
                             {data?.duration}
                         </p>
 
-                        <p className='text-white text-lg'>
+                        <p className='text-white text-sm py-1 md:text-lg'>
                             {data?.genre}
                         </p>
 
-                        <p className='text-white text-lg'>
+                        <p className='text-white text-sm py-1 md:text-lg'>
                             {data?.description}
                         </p>
 

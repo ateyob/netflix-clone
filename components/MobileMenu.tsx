@@ -7,7 +7,7 @@ interface MobileMenuProps {
 
 const MobileMenu : React.FC<MobileMenuProps> = ({ visible }) => {
     const router = useRouter();
-    
+
     if (!visible) {
         return null;
     }
@@ -20,7 +20,7 @@ const MobileMenu : React.FC<MobileMenuProps> = ({ visible }) => {
                 <div className=" px-3 text-center text-white hover:underline" onClick={() => router.push('/')}>
                     Home
                 </div>
-                <div className=" px-3 text-center text-white hover:underline" onClick={() => router.push('/series')}>
+                {/* <div className=" px-3 text-center text-white hover:underline" onClick={() => router.push('/series')}>
                     Series
                 </div>
                 <div className=" px-3 text-center text-white hover:underline" onClick={() => router.push('/films')}>
@@ -28,13 +28,13 @@ const MobileMenu : React.FC<MobileMenuProps> = ({ visible }) => {
                 </div>
                 <div className=" px-3 text-center text-white hover:underline" onClick={() => router.push('/newandpopular')}>
                     New & Popular
-                </div>
+                </div> */}
                 <div className=" px-3 text-center text-white hover:underline" onClick={() => router.push('/mylist')}>
                     My List
                 </div>
-                <div className=" px-3 text-center text-white hover:underline" onClick={() => router.push('/browsebylanguage')}>
+                {/* <div className=" px-3 text-center text-white hover:underline" onClick={() => router.push('/browsebylanguage')}>
                     Browse by Language
-                </div>
+                </div> */}
             </div>
         </div>
     )

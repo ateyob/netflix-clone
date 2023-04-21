@@ -10,7 +10,7 @@ const MyList = () => {
  return (
     <>
       <Navbar />
-      <div className=" text-white pt-16 md:pt-28">
+      <div className=" pt-16 md:pt-28">
         <MovieList title="My List" data={favorites} />
       </div>
     </>

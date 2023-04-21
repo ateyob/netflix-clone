@@ -16,7 +16,7 @@ const MovieCard: React.FC<MovieCardProps> = ({data}) => {
     const { openModal } = useInfoModal();
 
     return (
-        <div className=' group bg-zinc-900 col-span relative h-[12vw]'>
+        <div className="group bg-zinc-900 col-span relative h-[24vw] md:h-[12vw]">
             <img 
             className='
             cursor-pointer
@@ -28,7 +28,7 @@ const MovieCard: React.FC<MovieCardProps> = ({data}) => {
             group-hover:opacity-90 sm:group-hover:opacity-0
             delay-300
             w-full
-            h-[12vw]
+            h-[24vw] md:h-[12vw]
             '
             src={data.thumbnailUrl} alt="Thumbnail" />
 
@@ -39,7 +39,7 @@ const MovieCard: React.FC<MovieCardProps> = ({data}) => {
             top-0 
             transition 
             duration-200 
-            z-10 invisible 
+            z-10  
             sm:visible 
             delay-300 
             w-full 
@@ -56,7 +56,7 @@ const MovieCard: React.FC<MovieCardProps> = ({data}) => {
             shadow-xl
             rounded-t-md
             w-full
-            h-[12vw]
+            h-[24vw] md:h-[12vw]
             ' src={data.thumbnailUrl} alt="Thumbnail" />
 
             <div 
@@ -87,18 +87,18 @@ const MovieCard: React.FC<MovieCardProps> = ({data}) => {
                     </div>
                 </div>
 
-                <p className=' text-green-400 font-semibold mt-4'>
+                <p className=' text-green-400 font-semibold mt-2 md:mt-4'>
                 New 
                 {/* <span className=' text-white'>2003</span> */}
                 </p>
 
-                <div className=' flex flex-row mt-4 gap-2 items-center'>
+                <div className=' flex flex-row mt-2 md:mt-4 gap-2 items-center'>
                     <p className=' text-white text-[10px] lg:text-sm'>
                     {data.duration}
                     </p>
                 </div>
 
-                <div className=' flex flex-row mt-4 gap-2 items-center'>
+                <div className=' flex flex-row mt-2 md:mt-4 gap-2 items-center'>
                     <p className=' text-white text-[10px] lg:text-sm'>
                     {data.genre}
                     </p>
