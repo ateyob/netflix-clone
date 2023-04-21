@@ -4,6 +4,7 @@ import NavbarItem from "./NavbarItem"
 
 import { BsBell, BsChevronDown, BsSearch } from 'react-icons/bs'
 import AccountMenu from "./AccountMenu"
+import { useRouter } from "next/router"
 
 const TOP_OFFSET = 66;
 
@@ -36,6 +37,9 @@ const Navbar = () => {
         setShowAccountMenu((current) => !current);
     }, [])
 
+    const router = useRouter();
+
+
 
     return (
         <nav className=" w-full fixed z-40">
@@ -44,14 +48,26 @@ const Navbar = () => {
             px-4 md:px-16 py-6 flex flex-row items-center transition duration-50
             ${showBackground ? 'bg-zinc-900 bg-opacity-90' : ''}
             `}>
-                    <img className=" h-4 lg:h-7" src="/images/logo.png" alt="logo" />
+                    <img className=" h-4 lg:h-7 cursor-pointer" src="/images/logo.png" alt="logo" onClick={() => router.push('/')} />
                     <div className=" flex-row ml-8 gap-7 hidden lg:flex">
+                       <div onClick={() => router.push('/')}>
                         <NavbarItem label="Home" />
+                        </div>
+                        {/* <div onClick={() => router.push('/series')}>
                         <NavbarItem label="Series" />
+                        </div>
+                        <div onClick={() => router.push('/films')}>
                         <NavbarItem label="Films" />
+                        </div>
+                        <div onClick={() => router.push('/newandpopular')}>
                         <NavbarItem label="New & Popular" />
+                        </div> */}
+                        <div onClick={() => router.push('/mylist')}>
                         <NavbarItem label="My List" />
+                        </div>
+                        {/* <div onClick={() => router.push('/browsebylanguage')}>
                         <NavbarItem label="Browse by Language" />
+                        </div> */}
                     </div>
 
                     <div onClick={toggleMobileMenu} className=" lg:hidden flex flex-row items-center gap-2 ml-8 cursor-pointer relative">
